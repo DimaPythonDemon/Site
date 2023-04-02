@@ -7,7 +7,7 @@ app.secret_key = 'SuperSecretKeyX'
 
 @app.route('/')
 def start() -> 'html':
-    return render_template("MainPage.html")
+    return render_template("MainPage.html") #ghjghjfhj
 
 @app.route('/buxty')
 def Buxty() -> 'html':
