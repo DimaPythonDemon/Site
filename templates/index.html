@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>AquaSev</title>
+		<link rel="stylesheet" href="static/app.css"/>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	</head>
+	
+	<body>
+	
+<div class="Tools">
+<!-- <div class="Logo"> -->
+<!-- <img src="img/AquaSevLogo.png"> -->
+<!-- </div> -->
+<div class="user">
+    <img src="static/img/AquaSevGif.gif" />
+</div>
+    <div class="Menu">
+        <div class="dropdown">
+            <img src="static/img/BurgerMenu.jpg" onclick="myFunction()" class="dropbtn" width="120px" height="40px" />
+            <div id="myDropdown" class="dropdown-content">
+				<hr />
+                <a href="/" class="Paths"> Главная</a>
+				<hr />
+                <a href="/buxty" class="Paths">Бухты </a>
+				<hr />
+                <a href="/fuckty" class="Paths">Интересные факты о воде </a>
+                <hr />
+                <a href="/account" class="Paths">Личный кабинет</a>
+                <hr />
+                <a href="/how" class="Paths">Как проводился опыт </a>
+                <hr />
+                <a href="/about" class="Paths">О разработке</a>
+				<hr />
+            </div>
+        </div>
+    </div>
+    <!-- <div class="Reklama">
+        <marquee><b>Для более подробной информации по сайту обращайтесь по телефону +79788142955</b></marquee>
+    </div> -->
+</div>
+
+<div class="Site">
+
+    <div class="Page">
+		{% block body %}
+		
+		{% endblock %}
+    </div>
+
+</div>
+		<script src="static/js/app.js"></script>
+	</body>
+	
+</html

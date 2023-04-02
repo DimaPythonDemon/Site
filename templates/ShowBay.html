@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block body %}
+	<h2>{{ data["name"] }}</h2>
+		<div style="margin: 20px;" class="BuxtaImg">
+			<img src="static/img/{{ data["img_name"] }}" style="border: 4px {{ data["border_col"] }} solid; width: 500px; height: 500px; text-align: right;">
+		</div>
+		<div class="card-body" style="position: absolute; left: 540px; top: 80px; padding: 5px; background-color: {{ data["bgcolor"] }}; border: 6px solid {{ data["border_col"] }}; border-radius: 0px 25px 25px 0px; ">
+			<h4 class="card-title" style="font-size: 25px;">Характеристики бухты:</h4>
+			<p class="card-text">Описание: {{ data["description"] }}</p>
+			<p class="card-text">Насыщенность воды кислородом от необходимого значения: 112,7%</p>
+			<p class="card-text">Загрязнённость воды: существенная</p>
+			<p class="card-text">Наличие водорослей: присутствуют; бурые, зелёные</p>
+			<p class="card-text">Ловля рыбы: разрешена</p>
+			<p class="card-text">Пляж оборудован для купания: Да</p>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block body %}
+	<h2>Бухты Севастополя</h2>
+	<p class="press_to_see" style="text-align: center; font-size: 18px;">Можете нажать на картинку для подробной информации о бухте</p>
+	{% for buxta in data %}
+		<div class="card" style="width: 1000px; background-color: #82d5ff; border: 6px solid #108ac7; border-radius: 25px; padding: 10px; display: flex; margin: 30px;">
+		<div class="card-body" style="display: inline-block; padding: 5px; flex: 1; background-color: {{ buxta["bgcolor"] }}; border: 6px solid {{ buxta["border_col"] }}; border-radius: 25px 0px 0px 25px; ">
+			<h5 class="card-title" style="font-size: 18px;">{{ buxta["name"] }}</h4>
+			<p class="card-text">{{ buxta["description"] }}</p>
+			<a href="{{ buxta["hreef"] }}" class="super_puper_button">Узнать подробнее</a>
+		</div>
+		<div>
+			<a href="{{ buxta["hreef"] }}"><img src="static/img/{{ buxta["img_name"] }}" class="BuxtaImg" style="width: 300px; height: 300px; text-align: right;"></a>
+		</div>
+	</div>
+	{% endfor %}
+{% endblock %}
