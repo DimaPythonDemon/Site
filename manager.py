@@ -1,13 +1,6 @@
 from functions import *
 import time
 
-print("<begin(manager.py)")
-time.sleep(0.3)
-print("Database -data.json-> is connected successfully, code '200/'")
-time.sleep(0.7)
-print("Virtual enviroment here --- C:/Users/ДИМА/Desktop/AQUASEV/FLASK/Site/..")
-time.sleep(0.1)
-print("Manager is ready!")
 
 def load_new_thing(index=None):
     name = input(' > Name: ')
@@ -62,23 +55,11 @@ while command:
         update_data(indeX, load_new_thing(indeX))
         print(">>> Data in dataframe", indeX, "was updated successfully")
     elif command.lower() == "close":
-        print('Closing all processes.')
-        time.sleep(0.3)
-        print('DB closed.')
-        time.sleep(0.3)
-        print('Соnnection closed.')
-        time.sleep(0.7)
-        print('Modules and libraries disconnected.')
-        print()
+        print("closing database manager...")
         break
     else:
         print()
-        print('<#Warning!> Unknown command ->', command, '; exception not catched')
         print('     function output is: TыChoDolbaebError')
         print()
         time.sleep(2)
     command = input(">>> Input a command: ")
-
-print()
-print("Manager closed.")
-print("<end.(manager.py)")
